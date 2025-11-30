@@ -1,4 +1,7 @@
 body {
-    /* background-color: g; */
     background-image: linear-gradient(to right,#ff7e5f,#feb47b);
+}
+
+div {
+    background-color: yellow;
 }
