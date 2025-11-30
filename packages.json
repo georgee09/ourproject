@@ -1,5 +1,4 @@
 {
-  "fir": {},
-  "firs": {},
-  "first": {},
+  "first": ["@ourproject/package-a", "@ourproject/package-b" ],
+  "second": ["@ourproject/package-c", "@ourproject/package-d" ]
 }
