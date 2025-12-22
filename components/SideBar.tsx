@@ -3,6 +3,7 @@ import { BookCheck, Car, Settings } from "lucide-react";
 import { RiNotification2Line } from "react-icons/ri";
 import {  MdPayments } from "react-icons/md";
 import { TbTransactionBitcoin } from "react-icons/tb";
+import Image from "next/image";
 
 const baseURL = "http://localhost:3000";
 
@@ -13,9 +14,10 @@ const SideBar = () => {
            <div className="flex flex-col justify-between min-h-screen">
               <div className="">
                 <div className="flex justify-center items-center w-full my-2.5">
-                <div className="flex justify-center items-center p-6 rounded-full text-5xl font-bold text-purple-700 bg-purple-700/25 w-20 h-20">
-                  C
-                </div>
+                {/* <div className="flex justify-center items-center p-6 rounded-full text-5xl font-bold text-purple-700 bg-purple-700/25 w-20 h-20"> */}
+                  {/* C */}
+                {/* </div> */}
+                <Image src="/logo7.svg" alt="Company Logo" width={80} height={80} />
             </div>
             {/* <h2 className="text-lg mb-4 ml-3.5 text-white font-bold">Admin Panel</h2> */}
                   <nav className="space-y-2 ml-5 text-white font-medium">
