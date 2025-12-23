@@ -78,6 +78,7 @@ const lineOptions = {
 
 // import Image from "next/image";
 export default function Home() {
+  // console.log(`${process.env.NEXT_PUBLIC_API_KEY}`);
   return (
     <main className="max-w-6xl mx-auto text-white font-sans dark:bg-black">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

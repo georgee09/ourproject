@@ -1,6 +1,10 @@
+import { db } from "@/firebase/firebase.config";
+import { collection, getDocs } from "firebase/firestore";
 
 export async function GET() {
-  return new Response('Hello, this is the API route responding to GET requests!');
+  const cars = await getDocs(collection(db, "newcars"));
+  const response = cars.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  return Response.json(response);
 }
 
 export async function POST(request: Request) {
