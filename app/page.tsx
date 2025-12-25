@@ -146,16 +146,16 @@ export default function Home() {
               <input type="text" placeholder='Search...' className='border p-4 ml-3 rounded-4xl w-3/4 focus:border-purple-800' />
               <RiNotification4Fill className="inline text-2xl float-right mt-4 cursor-pointer" />
             </header>
-            <div className='bg-linear-to-l from-purple-600 to-purple-950 w-full my-4 rounded-lg p-4'>
+            <div className='bg-linear-to-l from-purple-600 to-purple-950 w-full my-4 rounded-lg p-1.5'>
               <p className='p-4 font-bold text-lg'>Car Availabilty</p>
               <br />
-              <div className='flex justify-between'>
+              <div className='flex justify-evenly pb-1'>
                 <div>
                   <i className=' absolute p-1 min-w-10 ml-1 mt-3'>
                     <Car />
                   </i>
                 <input list='car-number' id='car' placeholder='Car Number'
-                 className='border border-white rounded-lg py-4 pl-10'
+                 className='border border-white rounded-lg py-4 pl-9'
                   />
                 <datalist id='car-number'>
                   <option value='KA-01-HH-1234' />
@@ -166,8 +166,8 @@ export default function Home() {
                   <option value='KA-01-HH-3141' />
                 </datalist>
                 </div>
-                <input type="date" name="Date" id="Date"  className='border border-white p-2 rounded-4xl'/>
-                <input type="time" name="Time" id="Time" className='border border-white py-4 px-2 rounded-4xl' />
+                <input type="date" name="Date" id="Date"  className='border border-white py-2 px-1 rounded-4xl'/>
+                <input type="time" name="Time" id="Time" className='border border-white py-4 px-1 rounded-4xl' />
                 <button className='bg-purple-950/50 hover:bg-purple-700 rounded-lg py-4 px-2 font-bold'>
                   Check
                 </button>

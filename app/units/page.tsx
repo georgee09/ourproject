@@ -13,6 +13,12 @@ const page = async () => {
              <header className="font-bold text-4xl mb-5">
                 Units Details
              </header>
+             <div className="flex-row-reverse my-0.5">
+                  <a href="http://localhost:3000/units/create"
+                  className="bg-purple-600 font-bold rounded p-3 m-1.5">
+                    Add Car
+                  </a>
+             </div>
                 {
                   cars.map((car: any) => (
                     <div key={car.id} className="flex justify-between bg-linear-to-l from-purple-600 to-purple-950 rounded-lg pr-1.5 h-28">
@@ -51,7 +57,7 @@ const page = async () => {
                         <p>Price</p>
                         <p>
                           {
-                            car.price
+                            car.price_per_day
                           }
                         </p>
                       </div>

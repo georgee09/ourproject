@@ -25,6 +25,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.itl.cat',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ferraris-online.com',
+        port: '',
+        pathname: '/**',
       }
     ]
   },
