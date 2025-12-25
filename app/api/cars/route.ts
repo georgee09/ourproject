@@ -11,10 +11,9 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   const data = await request.formData();
   const car = Object.fromEntries(data.entries());
-  // if (car.is_available) {
-    // car.is_available = true;
-  // }
-  addDoc(collection(db, "newcars"), car);
+  // access field in this car object
+ const isAvailable = car.is_available ? true : false;
+  addDoc(collection(db, "newcars"), {...car, is_available: isAvailable});
   // window.location.href = "http://localhost:3000/units";
-  return Response.json({ message: car });
+  return Response.json({ message: {...car, is_available: isAvailable} });
 }
