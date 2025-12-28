@@ -1,3 +1,4 @@
+
 import { DollarSign } from "lucide-react"
 import Image from "next/image"
 import { GiCarSeat } from "react-icons/gi"
@@ -67,10 +68,11 @@ const page = async () => {
                         </button>
                       </div>
                       <div className="flex flex-col justify-evenly text-white font-bold text-lg border-l-2 pl-3">
-                            <button className="bg-linear-to-r from-purple-500 to-purple-950 px-5 rounded">
+                            <a href={`http://localhost:3000/units/edit/${car.id}`} className="bg-linear-to-r from-purple-500 to-purple-950 px-5 rounded">
                                 Edit
-                            </button>
-                            <button className="bg-red-800 px-5 rounded">
+                            </a>
+                            <button 
+                            className="bg-red-800 px-5 rounded">
                                 Delete
                             </button>
                       </div>
