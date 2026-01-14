@@ -75,26 +75,36 @@ const lineOptions = {
     },
   },
 };
+const today = new Date();
+const date = today.toISOString().split("T")[0];
+const now = new Date();
+const hours = now.getHours().toString().padStart(2, '0');
+const minutes = now.getMinutes().toString().padStart(2, '0');
 
-// import Image from "next/image";
+    // Format hours and minutes to ensure they always have two digits (e.g., 09 instead of 9)
+    // The padStart() method is ideal for this.
+
+    // Combine them into the required "HH:mm" format
+  const currentTime = `${hours}:${minutes}`;
 export default function Home() {
-  // console.log(`${process.env.NEXT_PUBLIC_API_KEY}`);
+  // const date = Date();
+  // const time = Time();
   return (
     <main className="max-w-6xl mx-auto text-white font-sans dark:bg-black">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-transparent min-h-screen col-span-1">
             <p className="font-bold text-2xl">
               Today Statistics
             </p>
-            <p className="font-sm text-gray-300">
-              Tue, 16 Dec, 2025, 8:30 AM
+            <p className="font-sm font-semibold text-gray-300">
+              Tue, 16 Dec, 2025, { currentTime }
             </p>
-            <div className="font-bold p-2 my-1 rounded-lg bg-linear-to-l from-purple-500 to-purple-950">
+            <div className="font-bold p-2 my-1 rounded-lg bg-linear-to-r from-purple-900/60 to-transparent">
               <div className="flex justify-between my-3">
                 <p>
                 Incomes 
               </p>
-              <p className="bg-purple-950/25 p-1 font-medium text-sm">
+              <p className="bg-purple-950 p-1 font-medium text-sm rounded">
                 Today
               </p>
               </div>
@@ -102,7 +112,7 @@ export default function Home() {
                 <p className="font-bold text-3xl">
                 $9001
                </p>
-              <p className="p-1 text-red-500 font-bold">
+              <p className="p-1 text-red-400 font-bold">
                 1.5%
               </p>
               </div>
@@ -112,12 +122,12 @@ export default function Home() {
                 Last Week &nbsp; $25301
               </p>
             </div>
-            <div className="font-bold p-2 my-4 rounded-lg bg-linear-to-l from-purple-500 to-purple-950">
+            <div className="font-bold p-2 my-4 rounded-lg bg-linear-to-r from-purple-900/60 to-transparent">
               <div className="flex justify-between my-3">
                 <p>
                 Expenses
               </p>
-              <p className="bg-purple-950/25 p-1 font-medium text-sm">
+              <p className="bg-purple-950 p-1 font-medium text-sm rounded">
                 Today
               </p>
               </div>
@@ -146,7 +156,7 @@ export default function Home() {
               <input type="text" placeholder='Search...' className='border p-4 ml-3 rounded-4xl w-3/4 focus:border-purple-800' />
               <RiNotification4Fill className="inline text-2xl float-right mt-4 cursor-pointer" />
             </header>
-            <div className='bg-linear-to-l from-purple-600 to-purple-950 w-full my-4 rounded-lg p-1.5'>
+            <div className='bg-linear-to-r from-purple-900/60 to-transparent w-full my-4 rounded-lg p-1.5'>
               <p className='p-4 font-bold text-lg'>Car Availabilty</p>
               <br />
               <div className='flex justify-evenly pb-1'>
@@ -166,14 +176,14 @@ export default function Home() {
                   <option value='KA-01-HH-3141' />
                 </datalist>
                 </div>
-                <input type="date" name="Date" id="Date"  className='border border-white py-2 px-1 rounded-4xl'/>
-                <input type="time" name="Time" id="Time" className='border border-white py-4 px-1 rounded-4xl' />
-                <button className='bg-purple-950/50 hover:bg-purple-700 rounded-lg py-4 px-2 font-bold'>
+                <input type="date" name="Date" defaultValue={date} id="Date" className='border border-white py-2 rounded-lg pl-2 pr-0.5'/>
+                <input type="time" name="Time" defaultValue={currentTime} id="Time" className='border border-white py-4 rounded-lg pl-2 pr-0.5' />
+                <button className='bg-purple-950 hover:bg-purple-700 rounded-lg py-4 px-2 font-bold'>
                   Check
                 </button>
               </div>
             </div>
-            <div className='bg-linear-to-l from-purple-600 to-purple-950 w-full my-4 rounded-lg p-4'>
+            <div className='bg-linear-to-r from-purple-900/60 to-transparent w-full my-4 rounded-lg p-4'>
               <p className='p-4 font-bold text-lg'>Live Car Status</p>
              </div>
               {/* <div className='bg-linear-to-b from-white to-purple-950 w-full my-4 rounded-lg p-4'>

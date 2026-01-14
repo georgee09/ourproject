@@ -2,11 +2,11 @@
 const page = () => {
     // https://ferraris-online.com/wp-content/uploads/2024/03/cover-photo-2.jpg
   return (
-    <main className="ax-w-6xl mx-auto text-white font-sans dark:bg-black">
+    <main className="ax-w-6xl mx-auto p-22 text-white font-sans dark:bg-black">
         <div className="grid grid-cols-1 gap-6">
             <div 
-            className="bg-linear-to-l
-             from-purple-500 to-purple-950 rounded-lg p-6 shadow-lg">
+            className="bg-linear-to-r from-purple-900/60 to-transparent
+             rounded-lg p-6 shadow-lg">
                 <form method="POST" action="http://localhost:3000/api/cars" className="space-y-4">
                 <div>
                     <label htmlFor="model">Model</label>
@@ -55,7 +55,7 @@ const page = () => {
                     </div>
                 </div>
                 <div>
-                    <button type="submit" className="w-full bg-purple-600 px-4 py-2 rounded-sm">Create the product</button>
+                    <button type="submit" className="w-full bg-purple-950 hover:bg-purple-700 px-4 py-2 rounded-sm">Create the product</button>
                 </div>
             </form>
             </div>

@@ -14,7 +14,7 @@ interface LineChartProps {
 
 const LineChart = ({data,options}: LineChartProps) => {
   return (
-    <div className='bg-linear-to-b from-white to-purple-950 w-full my-4 rounded-lg p-4'>
+    <div className='bg-linear-to-b from-white to-purple-900/40 w-full my-4 rounded-lg p-4'>
         {/* Line Chart */}
         <Line data={data} options={options} />
     </div>

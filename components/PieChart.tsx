@@ -11,9 +11,9 @@ interface PieChartProps {
 
 const PieChart = ({piedata}: PieChartProps) => {
   return (
-    <div className="font-bold p-2 my-1 rounded-lg bg-linear-to-b from-white to-purple-950">
+    <div className="font-bold p-2 my-1 rounded-lg bg-linear-to-b from-white to-purple-900/40">
         {/* Pie Chart */}
-        <Pie data={piedata} />
+        <Pie data={piedata}  />
     </div>
   )
 }
