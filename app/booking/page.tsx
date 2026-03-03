@@ -1,5 +1,8 @@
 
-const page = () => {
+const page = async () => {
+    const bookings = await fetch("http://localhost:3000/api/booking");
+    const data = await bookings.json();
+    console.log(data);
     const lis = [1,2,3,4,5]
   return (
     <div className="px-8">

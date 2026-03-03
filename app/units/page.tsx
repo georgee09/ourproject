@@ -6,7 +6,7 @@ const page = async () => {
   // console.log(response);
   const cars = await response.json();
   return (
-        <main className="max-w-6xl mx-auto px-8 text-white font-sans dark:bg-black">
+        <main className="max-w-6xl mx-auto px-20 text-white font-sans dark:bg-black">
             <div className="grid grid-cols-1 gap-6">
              <header className="font-bold text-4xl mb-5">
                 Units Details

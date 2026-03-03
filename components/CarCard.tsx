@@ -81,7 +81,10 @@ const CarCard = ({
             </div>
           </div>
           <button className="bg-linear-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-purple-500/50">
-            Book Now
+            Edit
+          </button>
+          <button className="bg-red-600 hover:bg-red-900 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-red-500/50">
+            Delete
           </button>
         </div>
       </div>
